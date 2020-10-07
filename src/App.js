@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoList from './Todo/TodoList';
+
+const todos = [
+  {id: 1, completed: false, title: 'Выпить стакан воды'},
+  {id: 2, completed: false, title: 'Сделать разминку'},
+  {id: 3, completed: false, title: 'Приготовить завтрак'}
+]
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='wrapper'>
+        <h1>React tutorial</h1>
+
+        <TodoList todos={todos}/>
       </div>
     );
   }
