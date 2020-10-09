@@ -30,7 +30,6 @@ function TodoItem({ todo, index, onChange }) {
                         checked={todo.completed}
                         style={styles.input} 
                         onChange={() => {
-                            
                             onChange(todo.id)
                         }}
                     />
